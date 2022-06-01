@@ -18,8 +18,30 @@ $dark: $colorGray900;
 $light: $colorGray100;
 
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $warning;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 
 :root {
     --bs-font-sans-serif: 'Plus Jakarta Sans', sans-serif !important;
     --bs-font-monospace: 'Roboto Mono', monospace !important;
+
   }
+
