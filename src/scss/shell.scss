@@ -1,7 +1,9 @@
+
+
 :root {
     --header-bar-space: 91px;
-}
 
+    
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
@@ -21,6 +23,8 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
+}
+
 
 body {
     position: relative;
@@ -136,7 +140,7 @@ main {
     .image {
         background-size: cover;
         z-index: 100;
-        background-image: url("../../dist/assets/safar-safarov-koOdUvfGr4c-unsplash.jpg");
+        // background-image: url();
         background-size: cover;
         background-position: center center;
         position: absolute;
@@ -157,14 +161,25 @@ main {
     }
 }
 
-.moyo-content-2fa {
+.moyo-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: $spacer * 2;
+    align-items: top;
+    justify-content: center;
     display:flex;
+    flex-wrap: wrap;
+}
+
+.moyo-content-2fa {
 
     .card {
         margin: auto;
-        width: auto;
+        height: 100%;
+        width: 100%;
     }
 }
+
 
 .moyo-content-body {
     display: flex;
