@@ -34,7 +34,7 @@ body {
     gap: $spacer;
     border-bottom: $border-width solid $light;
     position: fixed;
-    z-index: 2000;
+    z-index: 200;
     width: 100%;
 }
 
@@ -73,7 +73,6 @@ body {
 
 .moyo-sidebar {
     background-color: $primary;
-    // padding: $spacer;
     position: fixed;
     height: 100%;
     width: 200px;
@@ -136,8 +135,8 @@ main {
 
     .image {
         background-size: cover;
-        z-index: 1000;
-        background-image: url("http://localhost:9000/assets/safar-safarov-koOdUvfGr4c-unsplash.jpg");
+        z-index: 100;
+        background-image: url("../../dist/assets/safar-safarov-koOdUvfGr4c-unsplash.jpg");
         background-size: cover;
         background-position: center center;
         position: absolute;
@@ -149,12 +148,21 @@ main {
     }
 
     h1 {
-        z-index: 1500;
+        z-index: 150;
         padding: $spacer * 4;
         width: 100%;
         height: 100%;
         display: flex;
         align-items: center;
+    }
+}
+
+.moyo-content-2fa {
+    display:flex;
+
+    .card {
+        margin: auto;
+        width: auto;
     }
 }
 
@@ -173,6 +181,7 @@ main {
     display: flex;
     align-items: center;
     gap: $spacer;
+    flex-wrap: wrap;
 
         .badge {
             display: flex;
@@ -186,8 +195,10 @@ main {
     display:flex;
     flex-direction: column;
     align-items: center;
+    align-content: center;
     padding: $spacer * 2;
     gap: $spacer * 2;
+    flex-shrink: 1;
 
     a.btn {
         width: auto;
@@ -211,6 +222,12 @@ main {
     gap: $spacer * 2;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+
+    p.card-text {
+        align-items: center;
+        margin-bottom: 0;
+    }
 }
 
 .moyo-auth-app {
@@ -218,7 +235,7 @@ main {
     flex-direction: column;
     font-weight: 600;
     gap: $spacer * .5;
-    font-size: small;
+    font-size: $small-font-size;
 
     #google-play {
         min-height: 40px;
@@ -229,4 +246,38 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.modal-2fa {
+    
+    .modal-content {
+        border: none;
+
+        .modal-header, .modal-footer {
+            border: none;
+        }
+
+        .modal-body {
+            padding: $spacer * 4;
+
+            button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: $spacer;
+                margin: auto;
+            }
+        }
+
+        .moyo-2fa-form {
+            display: flex;
+            flex-direction: column;
+            gap: $spacer;
+
+            label {
+                font-size: $font-size-base * 2;
+                font-weight: 600;
+            }
+        }
+    }
 }

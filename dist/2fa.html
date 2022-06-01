@@ -46,7 +46,6 @@
                         d="M185.984 36.2901H181.483V13.0749H185.984V36.2901ZM181.386 6.60747C180.773 5.96394 180.466 5.19171 180.466 4.29077C180.466 3.38984 180.773 2.6176 181.386 1.97408C182.031 1.33055 182.805 1.00879 183.709 1.00879C184.612 1.00879 185.387 1.33055 186.032 1.97408C186.677 2.58543 187 3.35766 187 4.29077C187 5.19171 186.677 5.96394 186.032 6.60747C185.387 7.21882 184.612 7.5245 183.709 7.5245C182.805 7.5245 182.031 7.21882 181.386 6.60747Z"
                         fill="#070D1C" />
                 </svg>
-
             </div>
         </div>
     </header>
@@ -75,11 +74,14 @@
                 <div class="card text-center">
                     <div class="moyo-card-2fa card-body">
                         <h5 class="card-title">Authentication Applications</h5>
-                        <a href="#" class="btn btn-dark"><i class="fa-light fa-plus-large"></i></a>
+                        <a href="#" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#myModal"><i
+                                class="fa-light fa-plus-large"></i></a>
                         <p class="card-text">We connect with these Authentication Apps</p>
                         <div class="moyo-auth-apps">
                             <div class="moyo-auth-app">
                                 <div class="moyo-auth-logo">
+                                    <object data="/dist/assets/auth-logos/2fas_logomark.svg" height="40px"
+                                        width="40px"></object>
                                     <svg width="23" height="27" viewBox="0 0 23 27" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -206,6 +208,7 @@
                             </div>
                         </div>
                         <div class="moyo-auth-apps">
+                            <p class="card-text">These apps are available on these platforms:</p>
                             <div class="moyo-auth-app inline">
                                 <div class="moyo-auth-logo">
                                     <?xml version="1.0" encoding="utf-8"?>
@@ -484,6 +487,35 @@
             </section>
         </section>
     </main>
+
+
+
+    <div class="modal modal-2fa" tabindex="-1" id="myModal" aria-labelledby="myModel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <form>
+                        <div class="moyo-2fa-form mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Security Key</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">123456789</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary"><i
+                                class="fa-light fa-lock"></i>Authenticate</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
 </body>
 
 </html>
