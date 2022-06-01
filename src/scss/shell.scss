@@ -1,13 +1,41 @@
+:root {
+    --header-bar-space: 91px;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $warning;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
 body {
     position: relative;
 }
 
 .moyo-header {
+    background-color: $light;
     padding: $spacer;
     display: flex;
     align-items: center;
     gap: $spacer;
     border-bottom: $border-width solid $light;
+    position: fixed;
+    z-index: 2000;
+    width: 100%;
 }
 
 .moyo-header-left {
@@ -49,6 +77,7 @@ body {
     position: fixed;
     height: 100%;
     width: 200px;
+    top: var(--header-bar-space);
 
     button {
         width: 100%;
@@ -92,6 +121,7 @@ main {
     left: 200px;
     position: relative;
     width: calc(100% - 200px);
+    top: var(--header-bar-space);
 }
 
 .moyo-cover {
@@ -129,5 +159,74 @@ main {
 }
 
 .moyo-content-body {
+    display: flex;
+    flex-direction: column;
     padding: $spacer * 2;
+    gap: $spacer * 2;
+
+    .card-body {
+    background-color: $light;
+    border-radius: $border-radius;
+    }
+
+    .moyo-content-title {
+    display: flex;
+    align-items: center;
+    gap: $spacer;
+
+        .badge {
+            display: flex;
+            gap: $spacer * .25;
+        }
+
+    }
+}
+
+.moyo-card-2fa {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: $spacer * 2;
+    gap: $spacer * 2;
+
+    a.btn {
+        width: auto;
+        padding: $spacer * 2;
+        flex-shrink: 1;
+        border-radius: $border-radius-pill;
+
+        i {  
+        width: 24px;
+        height: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: scale(2);
+        }
+    }
+}
+
+.moyo-auth-apps {
+    display: flex;
+    gap: $spacer * 2;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.moyo-auth-app {
+    display:flex;
+    flex-direction: column;
+    font-weight: 600;
+    gap: $spacer * .5;
+    font-size: small;
+
+    #google-play {
+        min-height: 40px;
+    }
+}
+
+.moyo-auth-app.inline {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
