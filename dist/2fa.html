@@ -62,8 +62,8 @@
     </aside>
     <main>
         <section class="moyo-cover">
-            <h1>Security</h1>
-            <div class="image" style="background-image: url(/assets/alex-_ZfLlKxilpw-unsplash.jpg)"></div>
+            <h1>YubiKey <i class="fa-light fa-arrow-right-arrow-left"></i> Tovuti</h1>
+            <div class="image" style="background-image: url(/assets/security_bg_optimized.jpg)"></div>
         </section>
         <section class="moyo-content-body">
             <div class="moyo-content-title">
@@ -493,9 +493,22 @@
                 <section class="moyo-content-2fa">
                     <div class="card text-center">
                         <div class="moyo-card-2fa card-body">
-                            <h5 class="card-title">YubiKey</h5>
+                            <h5 class="card-title">YubiKey Authentication</h5>
                             <a href="#" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#myModal"><i
                                     class="fa-light fa-plus-large"></i></a>
+
+                            <div class="load">
+                                <hr />
+                                <hr />
+                                <hr />
+                                <hr />
+                            </div>
+
+                            <a href="#" class="moyo-2fa-link">What is a YubiKey Security Key?</a>
+                            <img class="moyo-yubi-1" src="assets/auth-images/5series-new-edited-1.png">
+                            <img class="moyo-yubi-2" src="assets/auth-images/5series-new-edited-2.png">
+                            <img class="moyo-yubi-3" src="assets/auth-images/5series-new-edited-3.png">
+                            <img class="moyo-yubi-4" src="assets/auth-images/SKY3-SKY2-overhead-large.png">
                         </div>
                     </div>
                 </section>
@@ -504,26 +517,31 @@
     </main>
 
     <div class="modal modal-2fa" tabindex="-1" id="myModal" aria-labelledby="myModel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content text-center">
                 <div class="modal-header">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-
-                    <form>
+                    <div class="moyo-2fa-progress">
+                        <div class="moyo-2fa-incomplete"><i class="fa-solid fa-xmark"></i></div>
+                        <hr class="moyo-2fa-divider">
+                        <div class="moyo-2fa-complete disabled"><i class="fa-solid fa-check"></i></div>
+                    </div>
+                    <form id="moyo-2fa-auth">
                         <div class="moyo-2fa-form mb-3">
                             <label for="exampleInputEmail1" class="form-label">Security Key</label>
                             <input type="email" class="form-control" id="exampleInputEmail1"
                                 aria-describedby="emailHelp">
-                            <div id="emailHelp" class="form-text">123456789</div>
+                            <div id="emailHelp" class="form-text moyo-copy-code">sdfghjh44s5daf45vzxe45twaas4f5s6</div>
                         </div>
-                        <button type="submit" class="btn btn-primary"><i
-                                class="fa-light fa-lock"></i>Authenticate</button>
+                        <button type="button" class="btn btn-primary" data-bs-target="#myModal2"
+                            data-bs-toggle="modal"><i class="fa-light fa-lock"></i>Authenticate</button>
                     </form>
-
                     <div class="moyo-modal-2fa-custom">
-                        <div class="moyo-modal-2fa-custom-left"></div>
+                        <div class="moyo-modal-2fa-custom-left">
+                            <img src="/assets/fake-qr.svg">
+                        </div>
                         <div class="moyo-modal-2fa-custom-right">
                             <ol>
                                 <li>Download a supported Two-factor Authenticator App from the Apple App Store or the
@@ -533,6 +551,33 @@
                                 <li>Enter the Security Code in the field below and click ‘Verify Code’</li>
                             </ol>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="modal modal-2fa" tabindex="-1" id="myModal2" aria-labelledby="myModel2" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content text-center">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="moyo-2fa-progress">
+                        <div class="moyo-2fa-incomplete disabled"><i class="fa-solid fa-xmark"></i></div>
+                        <hr class="moyo-2fa-divider">
+                        <div class="moyo-2fa-complete"><i class="fa-solid fa-check"></i></div>
+                    </div>
+
+                    <div class="moyo-2fa-form mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Authenticated</label>
+                        <div id="emailHelp" class="form-text">Congratulations, you’re authenticated
+                            with 2FA</div>
                     </div>
 
                 </div>

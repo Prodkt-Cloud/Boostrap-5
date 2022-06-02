@@ -106,7 +106,7 @@ main {
 
 .moyo-cover {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
     background-color: $primary;
     color: $light;
@@ -135,6 +135,11 @@ main {
         height: 100%;
         display: flex;
         align-items: center;
+        justify-content: center;
+
+        i {
+            margin: $spacer $spacer*2;
+        }
     }
 }
 
@@ -148,8 +153,19 @@ main {
     flex-wrap: wrap;
 }
 
+@media (min-width: 768px) { 
+    .moyo-content-2fa {
+        min-width:50vw;
+        min-height: 30vh;
+    }
+ }
+
 .moyo-content-2fa {
     gap: $spacer * 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 
     .card {
         margin: auto;
@@ -192,6 +208,33 @@ main {
     padding: $spacer * 2;
     gap: $spacer * 2;
     flex-shrink: 1;
+    position: relative;
+
+    .moyo-yubi-1 {
+        position: absolute;
+        bottom: -30px;
+        right: -30px;
+    }
+    .moyo-yubi-2 {
+        position: absolute;
+        top: -20px;
+        left: -20px;
+    }
+    .moyo-yubi-3 {
+        position: absolute;
+        bottom: 150px;
+        right: -30px;
+    }
+    .moyo-yubi-4 {
+        position: absolute;
+        bottom: 50px;
+        left: -60px;
+    }
+
+    .moyo-2fa-link {
+        font-size: $small-font-size * .9;
+        font-weight: 600;
+    }
 
     a.btn {
         width: auto;
@@ -252,6 +295,17 @@ main {
 
         .modal-body {
             padding: $spacer * 4;
+            padding-top: 0;
+
+            .moyo-copy-code {
+                background-color: $light;
+                text-color: $dark;
+                font-family: var(--bs-font-monospace);
+                font-weight: 600;
+                width: auto;
+                margin: auto;
+                padding: $spacer*.5 $spacer;
+            }
 
             button {
                 display: flex;
@@ -259,6 +313,50 @@ main {
                 align-items: center;
                 gap: $spacer;
                 margin: auto;
+            }
+
+            input {
+                max-width: 480px;
+                margin: auto;
+            }
+
+            .moyo-2fa-progress {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: $spacer * 2;
+
+                .moyo-2fa-divider {
+                    width: 48px;
+                    height: 1px;
+                }
+
+                .moyo-2fa-incomplete {
+                    padding: $spacer;
+                    background-color: $danger;
+                    border-radius: $border-radius-pill;
+                }
+
+                .moyo-2fa-complete {
+                    padding: $spacer;
+                    background-color: $success;
+                    border-radius: $border-radius-pill;
+                }
+
+                .disabled {
+                    opacity: .125;
+                }
+
+                i {
+                    width: 24px;
+                    height: 24px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: $light;
+                }
+
             }
         }
 
@@ -275,9 +373,41 @@ main {
     }
 }
 
+// Medium devices (tablets, 768px and up)
+@media (min-width: 992px) { 
+    .moyo-modal-2fa-custom {
+        display: flex;
+        align-items: center;
+        gap: $spacer * 2;
+    }
+ }
+
 .moyo-modal-2fa-custom {
+    flex-direction: row;
+    margin-top: $spacer * 2;
+
     ol {
         text-align: left;
-        margin-top: $spacer * 2;
+        margin: $spacer * 2;
     }
 }
+
+
+.load{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);border-radius:100%;
+    /*change these sizes to fit into your project*/
+    width:100px;
+    height:100px;
+  }
+  .load hr{border:0;margin:0;width:40%;height:40%;position:absolute;border-radius:100%;animation:spin 2s ease infinite}
+  
+  .load :first-child{background:#19A68C;animation-delay:-1.5s}
+  .load :nth-child(2){background:#F63D3A;animation-delay:-1s}
+  .load :nth-child(3){background:#FDA543;animation-delay:-0.5s}
+  .load :last-child{background:#193B48}
+  
+  @keyframes spin{
+    0%,100%{transform:translate(0)}
+    25%{transform:translate(160%)}
+    50%{transform:translate(160%, 160%)}
+    75%{transform:translate(0, 160%)}
+  }

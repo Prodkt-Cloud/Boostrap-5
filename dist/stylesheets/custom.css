@@ -11867,7 +11867,7 @@ main {
 
 .moyo-cover {
   display: flex;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
   background-color: #155eef;
   color: #f2f4f7;
@@ -11894,6 +11894,10 @@ main {
   height: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+.moyo-cover h1 i, .moyo-cover .h1 i {
+  margin: 1rem 2rem;
 }
 
 .moyo-content-wrapper {
@@ -11906,8 +11910,18 @@ main {
   flex-wrap: wrap;
 }
 
+@media (min-width: 768px) {
+  .moyo-content-2fa {
+    min-width: 50vw;
+    min-height: 30vh;
+  }
+}
 .moyo-content-2fa {
   gap: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 .moyo-content-2fa .card {
   margin: auto;
@@ -11944,6 +11958,31 @@ main {
   padding: 2rem;
   gap: 2rem;
   flex-shrink: 1;
+  position: relative;
+}
+.moyo-card-2fa .moyo-yubi-1 {
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+}
+.moyo-card-2fa .moyo-yubi-2 {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+}
+.moyo-card-2fa .moyo-yubi-3 {
+  position: absolute;
+  bottom: 150px;
+  right: -30px;
+}
+.moyo-card-2fa .moyo-yubi-4 {
+  position: absolute;
+  bottom: 50px;
+  left: -60px;
+}
+.moyo-card-2fa .moyo-2fa-link {
+  font-size: 0.7875em;
+  font-weight: 600;
 }
 .moyo-card-2fa a.btn {
   width: auto;
@@ -11997,6 +12036,16 @@ main {
 }
 .modal-2fa .modal-content .modal-body {
   padding: 4rem;
+  padding-top: 0;
+}
+.modal-2fa .modal-content .modal-body .moyo-copy-code {
+  background-color: #f2f4f7;
+  text-color: #101828;
+  font-family: var(--bs-font-monospace);
+  font-weight: 600;
+  width: auto;
+  margin: auto;
+  padding: 0.5rem 1rem;
 }
 .modal-2fa .modal-content .modal-body button {
   display: flex;
@@ -12004,6 +12053,42 @@ main {
   align-items: center;
   gap: 1rem;
   margin: auto;
+}
+.modal-2fa .modal-content .modal-body input {
+  max-width: 480px;
+  margin: auto;
+}
+.modal-2fa .modal-content .modal-body .moyo-2fa-progress {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.modal-2fa .modal-content .modal-body .moyo-2fa-progress .moyo-2fa-divider {
+  width: 48px;
+  height: 1px;
+}
+.modal-2fa .modal-content .modal-body .moyo-2fa-progress .moyo-2fa-incomplete {
+  padding: 1rem;
+  background-color: #b42318;
+  border-radius: 50rem;
+}
+.modal-2fa .modal-content .modal-body .moyo-2fa-progress .moyo-2fa-complete {
+  padding: 1rem;
+  background-color: #027a48;
+  border-radius: 50rem;
+}
+.modal-2fa .modal-content .modal-body .moyo-2fa-progress .disabled {
+  opacity: 0.125;
+}
+.modal-2fa .modal-content .modal-body .moyo-2fa-progress i {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f2f4f7;
 }
 .modal-2fa .modal-content .moyo-2fa-form {
   display: flex;
@@ -12015,9 +12100,75 @@ main {
   font-weight: 600;
 }
 
+@media (min-width: 992px) {
+  .moyo-modal-2fa-custom {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+.moyo-modal-2fa-custom {
+  flex-direction: row;
+  margin-top: 2rem;
+}
 .moyo-modal-2fa-custom ol {
   text-align: left;
-  margin-top: 2rem;
+  margin: 2rem;
+}
+
+.load {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  /*change these sizes to fit into your project*/
+  width: 100px;
+  height: 100px;
+}
+
+.load hr {
+  border: 0;
+  margin: 0;
+  width: 40%;
+  height: 40%;
+  position: absolute;
+  border-radius: 100%;
+  animation: spin 2s ease infinite;
+}
+
+.load :first-child {
+  background: #19A68C;
+  animation-delay: -1.5s;
+}
+
+.load :nth-child(2) {
+  background: #F63D3A;
+  animation-delay: -1s;
+}
+
+.load :nth-child(3) {
+  background: #FDA543;
+  animation-delay: -0.5s;
+}
+
+.load :last-child {
+  background: #193B48;
+}
+
+@keyframes spin {
+  0%, 100% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translate(160%);
+  }
+  50% {
+    transform: translate(160%, 160%);
+  }
+  75% {
+    transform: translate(0, 160%);
+  }
 }
 
 /*# sourceMappingURL=custom.css.map */
