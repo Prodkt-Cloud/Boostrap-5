@@ -214,21 +214,49 @@ main {
         position: absolute;
         bottom: -30px;
         right: -30px;
+        
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     }
     .moyo-yubi-2 {
         position: absolute;
         top: -20px;
         left: -20px;
+        
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     }
     .moyo-yubi-3 {
         position: absolute;
         bottom: 150px;
         right: -30px;
+        
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     }
     .moyo-yubi-4 {
         position: absolute;
         bottom: 50px;
         left: -60px;
+        
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     }
 
     .moyo-2fa-link {
@@ -393,12 +421,30 @@ main {
 }
 
 
-.load{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);border-radius:100%;
+.load{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    border-radius:100%;
     /*change these sizes to fit into your project*/
     width:100px;
     height:100px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    z-index:50;
   }
-  .load hr{border:0;margin:0;width:40%;height:40%;position:absolute;border-radius:100%;animation:spin 2s ease infinite}
+  .load hr{border:0;margin:0;width:40%;height:40%;position:absolute;border-radius:100%;animation:spin 2s ease infinite;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;}
   
   .load :first-child{background:#19A68C;animation-delay:-1.5s}
   .load :nth-child(2){background:#F63D3A;animation-delay:-1s}

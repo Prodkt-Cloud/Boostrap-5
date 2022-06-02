@@ -11964,21 +11964,45 @@ main {
   position: absolute;
   bottom: -30px;
   right: -30px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .moyo-card-2fa .moyo-yubi-2 {
   position: absolute;
   top: -20px;
   left: -20px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .moyo-card-2fa .moyo-yubi-3 {
   position: absolute;
   bottom: 150px;
   right: -30px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .moyo-card-2fa .moyo-yubi-4 {
   position: absolute;
   bottom: 50px;
   left: -60px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .moyo-card-2fa .moyo-2fa-link {
   font-size: 0.7875em;
@@ -12125,6 +12149,13 @@ main {
   /*change these sizes to fit into your project*/
   width: 100px;
   height: 100px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: 50;
 }
 
 .load hr {
@@ -12135,6 +12166,12 @@ main {
   position: absolute;
   border-radius: 100%;
   animation: spin 2s ease infinite;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .load :first-child {
